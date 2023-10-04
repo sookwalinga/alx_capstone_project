@@ -38,9 +38,11 @@ This project is built using the following technologies and tools:
 - **Flask**: For handling form submissions or dynamic content.
 - **Netlify**: Where the website is deployed.
 
-## Screenshots or Demo:
+## Screenshots & Prototype:
 
-[TODO: screenshots and link to a figma prototype.]
+![Design](design.png)
+
+[Protoype](https://www.figma.com/proto/eOX3A9H8y0Lz66hCt9l3td/Portfolio-Website?type=design&node-id=1-2&t=hnztp8W3zMAbr2vZ-1&scaling=scale-down&page-id=0%3A1&mode=design)
 
 ## Roadmap and Future Enhancements:
 
@@ -57,9 +59,9 @@ Feel free to connect with me or explore more of my work through the following ch
 
 - **Name**: Samuel Okwalinga
 - **Email**: sookwalinga@gmail.com
-- **GitHub**: [https://github.com/sookwalinga]
-- **LinkedIn**: [https://www.linkedin.com/in/sookwalinga/]
-- **Twitter**: [https://www.linkedin.com/in/sookwalinga/]
+- **GitHub**: [GitHub Profile](https://github.com/sookwalinga)
+- **LinkedIn**: [Linkedin](https://www.linkedin.com/in/sookwalinga/)
+- **Twitter**: [Twitter](https://twitter.com/sookwalinga)
 - **Website**: [TO BE ADDED SOON!]
 
 Thank you for visiting my Personal Portfolio Website!
