@@ -40,7 +40,8 @@ This project is built using the following technologies and tools:
 
 ## Screenshots & Prototype:
 
-![Design](design.png)
+![Flowchart](flowchart.png)
+![Design](hifi_design.png)
 
 [Protoype](https://www.figma.com/proto/eOX3A9H8y0Lz66hCt9l3td/Portfolio-Website?type=design&node-id=1-2&t=hnztp8W3zMAbr2vZ-1&scaling=scale-down&page-id=0%3A1&mode=design)
 
