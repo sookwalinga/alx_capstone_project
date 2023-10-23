@@ -187,6 +187,7 @@ h6 {
   outline: none !important;
   cursor: pointer;
   text-align: right;
+  display: none;
 }
 
 .mobile-nav-toggle i {
@@ -203,6 +204,12 @@ h6 {
 
 .mobile-nav-active .mobile-nav-toggle i {
   color: #149ddd;
+}
+
+@media (max-width: 768px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -449,6 +456,51 @@ section {
   top: 0;
   background: #fff;
   border: 2px solid #1f5297;
+}
+
+/*--------------------------------------------------------------
+# Breadcrumbs
+--------------------------------------------------------------*/
+.breadcrumbs {
+  padding: 20px 0;
+  background: #f9f9f9;
+}
+
+.breadcrumbs h2 {
+  font-size: 26px;
+  font-weight: 300;
+}
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+}
+
+.breadcrumbs ol li + li {
+  padding-left: 10px;
+}
+
+.breadcrumbs ol li + li::before {
+  display: inline-block;
+  padding-right: 10px;
+  color: #0e2442;
+  content: '/';
+}
+
+@media (max-width: 768px) {
+  .breadcrumbs .d-flex {
+    display: block !important;
+  }
+  .breadcrumbs ol {
+    display: block;
+  }
+  .breadcrumbs ol li {
+    display: inline-block;
+  }
 }
 
 /*--------------------------------------------------------------

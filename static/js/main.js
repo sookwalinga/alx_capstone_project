@@ -1,9 +1,10 @@
+// @ts-nocheck
 !(function ($) {
   'use strict'
 
   // Hero typed
   if ($('.typed').length) {
-    var typed_strings = $('.typed').data('typed-items')
+    let typed_strings = $('.typed').data('typed-items')
     typed_strings = typed_strings.split(',')
     new Typed('.typed', {
       strings: typed_strings,
@@ -22,9 +23,9 @@
       location.hostname == this.hostname
     ) {
       e.preventDefault()
-      var target = $(this.hash)
+      let target = $(this.hash)
       if (target.length) {
-        var scrollto = target.offset().top
+        let scrollto = target.offset().top
 
         $('html, body').animate(
           {
@@ -53,9 +54,9 @@
   // Activate smooth scroll on page load with hash links in the url
   $(document).ready(function () {
     if (window.location.hash) {
-      var initial_nav = window.location.hash
+      let initial_nav = window.location.hash
       if ($(initial_nav).length) {
-        var scrollto = $(initial_nav).offset().top
+        let scrollto = $(initial_nav).offset().top
         $('html, body').animate(
           {
             scrollTop: scrollto,
@@ -75,7 +76,7 @@
   })
 
   $(document).click(function (e) {
-    var container = $('.mobile-nav-toggle')
+    let container = $('.mobile-nav-toggle')
     if (!container.is(e.target) && container.has(e.target).length === 0) {
       if ($('body').hasClass('mobile-nav-active')) {
         $('body').removeClass('mobile-nav-active')
@@ -87,14 +88,14 @@
   })
 
   // Navigation active state on scroll
-  var nav_sections = $('section')
-  var main_nav = $('.nav-menu, .mobile-nav')
+  let nav_sections = $('section')
+  let main_nav = $('.nav-menu, .mobile-nav')
 
   $(window).on('scroll', function () {
-    var cur_pos = $(this).scrollTop() + 200
+    let cur_pos = $(this).scrollTop() + 200
 
     nav_sections.each(function () {
-      var top = $(this).offset().top,
+      let top = $(this).offset().top,
         bottom = top + $(this).outerHeight()
 
       if (cur_pos >= top && cur_pos <= bottom) {
@@ -152,7 +153,7 @@
 
   // Porfolio isotope and filter
   $(window).on('load', function () {
-    var portfolioIsotope = $('.portfolio-container').isotope({
+    let portfolioIsotope = $('.portfolio-container').isotope({
       itemSelector: '.portfolio-item',
       layoutMode: 'fitRows',
     })
@@ -211,7 +212,7 @@
     aos_init()
   })
 
-  var monthNames = [
+  let monthNames = [
     'January',
     'February',
     'March',
@@ -225,9 +226,9 @@
     'November',
     'December',
   ]
-  var d = new Date()
-  var month = monthNames[d.getMonth()]
-  var year = d.getFullYear()
+  let d = new Date()
+  let month = monthNames[d.getMonth()]
+  let year = d.getFullYear()
 
   window.onload = function () {
     document.getElementById('currentMonth').innerHTML = month
@@ -237,61 +238,60 @@
 
 // Contact Form
 // Validation.
-var validate = function (e) {
-  var fields = document.querySelectorAll(
+let validate = function (e) {
+  let fields = document.querySelectorAll(
     '.form-container textarea, .form-container input[type="text"]'
   )
-  var regEx
-  var removeSpan
-  var par
-  var check = false
-  var val
-  var errArr = []
+  let regEx
+  let removeSpan
+  let par
+  let check = false
+  let val
+  let errArr = []
 
-  for (var i = 0; i < fields.length; i++) {
-    if (fields[i].value === '') {
-      if (fields[i].nextElementSibling.classList.contains('error')) {
-        removeSpan = fields[i].nextElementSibling
-        par = fields[i].parentNode
+  for (const element of fields) {
+    if (element.value === '') {
+      if (element.nextElementSibling.classList.contains('error')) {
+        removeSpan = element.nextElementSibling
+        par = element.parentNode
         par.removeChild(removeSpan)
-        fields[i].nextElementSibling.innerHTML =
-          fields[i].placeholder + ' is required'
-        fields[i].style.boxShadow = '0 0 2px 1px #cc0001'
-        check = false
-        errArr.push(fields[i])
+        element.nextElementSibling.innerHTML =
+          element.placeholder + ' is required'
+        element.style.boxShadow = '0 0 2px 1px #cc0001'
+        errArr.push(element)
       }
-      fields[i].nextElementSibling.innerHTML =
-        fields[i].placeholder + ' is required'
-      fields[i].style.boxShadow = '0 0 2px 1px #cc0001'
+      element.nextElementSibling.innerHTML =
+        element.placeholder + ' is required'
+      element.style.boxShadow = '0 0 2px 1px #cc0001'
       check = false
-      errArr.push(fields[i])
+      errArr.push(element)
     } else {
       // check if message and name values contain valid characters.
-      if (fields[i].id !== 'email') {
-        val = isValidChar(fields[i])
+      if (element.id !== 'email') {
+        val = isValidChar(element)
         if (val === false) {
-          fields[i].nextElementSibling.innerHTML = 'Invalid inputs'
-          fields[i].style.boxShadow = '0 0 2px 1px #cc0001'
+          element.nextElementSibling.innerHTML = 'Invalid inputs'
+          element.style.boxShadow = '0 0 2px 1px #cc0001'
           check = false
-          errArr.push(fields[i])
+          errArr.push(element)
         } else {
-          fields[i].nextElementSibling.innerHTML = ''
-          fields[i].style.boxShadow = 'none'
+          element.nextElementSibling.innerHTML = ''
+          element.style.boxShadow = 'none'
           check = true
         }
       }
 
-      if (fields[i].id === 'email') {
-        val = isValidEmail(fields[i])
+      if (element.id === 'email') {
+        val = isValidEmail(element)
         if (val === false) {
-          fields[i].nextElementSibling.innerHTML =
+          element.nextElementSibling.innerHTML =
             'Please enter a valid email address.'
-          fields[i].style.boxShadow = '0 0 2px 1px #cc0001'
+          element.style.boxShadow = '0 0 2px 1px #cc0001'
           check = false
-          errArr.push(fields[i])
+          errArr.push(element)
         } else {
-          fields[i].nextElementSibling.innerHTML = ''
-          fields[i].style.boxShadow = 'none'
+          element.nextElementSibling.innerHTML = ''
+          element.style.boxShadow = 'none'
           check = true
         }
       }
@@ -299,10 +299,10 @@ var validate = function (e) {
   }
 
   if (check === false) {
-    var count = 0
-    var toErr = setInterval(function () {
-      var e = errArr[0].offsetTop + -25
-      var pos = Math.abs(e)
+    let count = 0
+    let toErr = setInterval(function () {
+      let e = errArr[0].offsetTop + -25
+      let pos = Math.abs(e)
       if (count < pos) {
         count++
         window.scrollTo(0, count)
@@ -317,7 +317,7 @@ var validate = function (e) {
   // Helper functions.
   function isValidEmail(e) {
     regEx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-    var email = e.value
+    let email = e.value
     if (!regEx.test(email)) {
       return false
     }
@@ -325,7 +325,7 @@ var validate = function (e) {
 
   function isValidChar(e) {
     regEx = /^[a-zA-Z@#$%!?^&*()_+\-=\[\]{};':"\\|,.\/? ]*$/
-    var value = e.value
+    let value = e.value
     if (!regEx.test(value)) {
       return false
     }

@@ -1,0 +1,73 @@
+{%extends "layout.html"%}
+
+{%block title%}
+Portfolio Details - Ufarm
+{%endblock%}
+
+{%block content%}
+    <!-- ======= Main ======= -->
+    <main id="main">
+      <!-- ======= Breadcrumbs ======= -->
+      <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-center">
+            <h2>Ufarm Details</h2>
+            <ol>
+              <li><a href="/">Home</a></li>
+              <li>Portfolio Details</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <!-- End Breadcrumbs -->
+
+      <!-- ======= Portfolio Details Section ======= -->
+      <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+          <div class="portfolio-details-container">
+            <div class="owl-carousel portfolio-details-carousel">
+              <img
+              src="{{url_for('static', filename='img/ufarm1.png')}}"
+                class="img-fluid"
+                alt=""
+              />
+              <img
+              src="{{url_for('static', filename='img/ufarm2.png')}}"
+                class="img-fluid"
+                alt=""
+              />
+              <img
+              src="{{url_for('static', filename='img/ufarm3.png')}}"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong>: Web design</li>
+                <li><strong>Client</strong>: Refactory Project</li>
+                <li><strong>Project date</strong>: November, 2020</li>
+                <li>
+                  <strong>Project URL</strong>:
+                  <a href="https://ufarm-massajja.herokuapp.com/">ufarm</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="portfolio-description">
+            <h2>Ufarm (Masajja Division Urban Farmers Website)</h2>
+            <p>
+              This is a project developed using Pug, CSS, Bootstrap, Vanilla
+              Javascript for validations, nodejs and express js for the backend,
+              nodemailer API for messaging and MongoDB for the database.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- End Portfolio Details Section -->
+    </main>
+  <!-- End #main -->
+{%endblock%}

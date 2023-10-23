@@ -34,7 +34,7 @@ This project is built using the following technologies and tools:
 
 - **HTML**: For creating the website's structure and content.
 - **CSS**: For styling and layout design.
-- **JavaScript**: To add interactivity and dynamic behavior.
+- **JavaScript**: To add interactivity, dynamic behavior and validation.
 - **Flask**: For handling form submissions or dynamic content.
 - **Netlify**: Where the website is deployed.
 

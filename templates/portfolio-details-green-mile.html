@@ -1,0 +1,67 @@
+{%extends "layout.html"%}
+
+{%block title%}
+Portfolio Details - Green Mile Connection
+{%endblock%}
+
+{%block content%}
+    <!-- ======= Main ======= -->
+    <main id="main">
+      <!-- ======= Breadcrumbs ======= -->
+      <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-center">
+            <h2>Green Mile Connection Details</h2>
+            <ol>
+              <li><a href="/">Home</a></li>
+              <li>Portfolio Details</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <!-- End Breadcrumbs -->
+
+      <!-- ======= Portfolio Details Section ======= -->
+      <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+          <div class="portfolio-details-container">
+            <div class="owl-carousel portfolio-details-carousel">
+              <img src="{{url_for('static', filename='img/greenmile-1.png')}}" class="img-fluid" alt="" />
+              <img src="{{url_for('static', filename='img/greenmile-2.png')}}" class="img-fluid" alt="" />
+              <img src="{{url_for('static', filename='img/greenmile-3.png')}}" class="img-fluid" alt="" />
+              <img src="{{url_for('static', filename='img/greenmile-4.png')}}" class="img-fluid" alt="" />
+            </div>
+
+            <div class="portfolio-info">
+              <h3>Project information</h3>
+              <ul>
+                <li><strong>Category</strong>: Web design</li>
+                <li><strong>Client</strong>: Tunga Project</li>
+                <li><strong>Project date</strong>: May, 2021</li>
+                <li>
+                  <strong>Project URL</strong>:
+                  <a
+                    href="https://green-mile-connection.netlify.app/"
+                    target="blank"
+                    >green-mile-connection</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="portfolio-description">
+            <h2>Green Mile Connection</h2>
+            <p>
+              Project is developed using React JS on the frontend and django on
+              the backend. Green Mile Connection is a web application that
+              connects suppliers of goods to packagers, loaders, transporters
+              and end-consumers.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- End Portfolio Details Section -->
+    </main>
+  <!-- End #main -->
+{%endblock%}

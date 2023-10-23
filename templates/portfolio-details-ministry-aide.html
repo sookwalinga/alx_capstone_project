@@ -1,0 +1,69 @@
+{%extends "layout.html"%} {%block title%} Portfolio Details - Ministry Aid
+Flutter Mobile App {%endblock%} {%block content%}
+<!-- ======= Main ======= -->
+<main id="main">
+  <!-- ======= Breadcrumbs ======= -->
+  <section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <h2>Ministry Aid Flutter Mobile App Details</h2>
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li>Portfoio Details</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+  <!-- End Breadcrumbs -->
+
+  <!-- ======= Portfolio Details Section ======= -->
+  <section id="portfolio-details" class="portfolio-details">
+    <div class="container">
+      <div class="portfolio-details-container">
+        <div class="owl-carousel portfolio-details-carousel">
+          <img
+            src="{{url_for('static', filename='img/ministry_aide_1.png')}}"
+            class="img-fluid"
+            alt=""
+            style="width: 15rem"
+          />
+          <img
+            src="{{url_for('static', filename='img/ministry_aide_2.png')}}"
+            class="img-fluid"
+            alt=""
+            style="width: 15rem"
+          />
+          <img
+            src="{{url_for('static', filename='img/ministry_aide_3.png')}}"
+            class="img-fluid"
+            alt=""
+            style="width: 15rem"
+          />
+          <img
+            src="{{url_for('static', filename='img/ministry_aide_4.png')}}"
+            class="img-fluid"
+            alt=""
+            style="width: 15rem"
+          />
+        </div>
+
+        <div class="portfolio-info">
+          <h3>Project information</h3>
+          <ul>
+            <li><strong>Category</strong>: Flutter App Development</li>
+            <li><strong>Client</strong>: Freelance Project</li>
+            <li><strong>Project date</strong>: 2023</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="portfolio-description">
+        <h2>Mobile app for recording ministry records</h2>
+        <p>Developed using Flutter.</p>
+      </div>
+    </div>
+  </section>
+  <!-- End Portfolio Details Section -->
+</main>
+<!-- End #main -->
+{%endblock%}
