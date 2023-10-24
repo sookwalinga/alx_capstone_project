@@ -233,6 +233,7 @@
 
 //DOC: Contact Form
 // Validation.
+
 let validate = function (e) {
   let fields = document.querySelectorAll(
     '.form-container textarea, .form-container input[type="text"]'
@@ -327,41 +328,9 @@ let validate = function (e) {
   }
 }
 
-// Send email
-function submitForm(event) {
-  event.preventDefault()
-
-  // Get form data
-  const name = document.forms['contactForm']['name'].value
-  const email = document.forms['contactForm']['email'].value
-  const subject = document.forms['contactForm']['subject'].value
-
-  // Validate the data (you can add more validation as needed)
-  if (name === '' || email === '' || subject === '') {
-    alert('Please fill in all required fields.')
-    return
+// DOC: Access form.
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+  if (!validate(e)) {
+    e.preventDefault()
   }
-
-  // Construct the data to send to the server
-  const data = {
-    name: name,
-    email: email,
-    subject: subject,
-  }
-
-  // Send the data to the server (you need a server-side script to handle this)
-  fetch('', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
-  })
-    .then((response) => response.text())
-    .then((message) => {
-      alert(message)
-    })
-    .catch((error) => {
-      console.error('Error:', error)
-    })
-}
+})
