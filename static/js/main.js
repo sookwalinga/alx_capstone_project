@@ -2,7 +2,7 @@
 !(function ($) {
   'use strict'
 
-  // Hero typed
+  //DOC: Hero typed
   if ($('.typed').length) {
     let typed_strings = $('.typed').data('typed-items')
     typed_strings = typed_strings.split(',')
@@ -15,7 +15,7 @@
     })
   }
 
-  // Smooth scroll for the navigation menu and links with .scrollto classes
+  //DPC: Smooth scroll for the navigation menu and links with .scrollto classes
   $(document).on('click', '.nav-menu a, .scrollto', function (e) {
     if (
       location.pathname.replace(/^\//, '') ==
@@ -51,7 +51,7 @@
     }
   })
 
-  // Activate smooth scroll on page load with hash links in the url
+  //DOC: Activate smooth scroll on page load with hash links in the url
   $(document).ready(function () {
     if (window.location.hash) {
       let initial_nav = window.location.hash
@@ -87,7 +87,7 @@
     }
   })
 
-  // Navigation active state on scroll
+  //DOC: Navigation active state on scroll
   let nav_sections = $('section')
   let main_nav = $('.nav-menu, .mobile-nav')
 
@@ -113,7 +113,7 @@
     })
   })
 
-  // Back to top button
+  //DOC: Back to top button
   $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
       $('.back-to-top').fadeIn('slow')
@@ -133,13 +133,7 @@
     return false
   })
 
-  // jQuery counterUp
-  $('[data-toggle="counter-up"]').counterUp({
-    delay: 10,
-    time: 1000,
-  })
-
-  // Skills section
+  //DOC: Skills section
   $('.skills-content').waypoint(
     function () {
       $('.progress .progress-bar').each(function () {
@@ -151,7 +145,7 @@
     }
   )
 
-  // Porfolio isotope and filter
+  //DOC: Porfolio isotope and filter
   $(window).on('load', function () {
     let portfolioIsotope = $('.portfolio-container').isotope({
       itemSelector: '.portfolio-item',
@@ -168,13 +162,13 @@
       aos_init()
     })
 
-    // Initiate venobox (lightbox feature used in portofilo)
+    //DOC: Initiate venobox (lightbox feature used in portofilo)
     $(document).ready(function () {
       $('.venobox').venobox()
     })
   })
 
-  // Testimonials carousel (uses the Owl Carousel library)
+  //DOC: Testimonials carousel (uses the Owl Carousel library)
   $('.testimonials-carousel').owlCarousel({
     autoplay: true,
     dots: true,
@@ -192,7 +186,7 @@
     },
   })
 
-  // Portfolio details carousel
+  //DOC: Portfolio details carousel
   $('.portfolio-details-carousel').owlCarousel({
     autoplay: true,
     dots: true,
@@ -200,7 +194,7 @@
     items: 1,
   })
 
-  // Init AOS
+  //DOC: Init AOS
   function aos_init() {
     AOS.init({
       duration: 1000,
@@ -212,6 +206,7 @@
     aos_init()
   })
 
+  // DOC: Copyright dynamic date
   let monthNames = [
     'January',
     'February',
@@ -236,7 +231,7 @@
   }
 })(jQuery)
 
-// Contact Form
+//DOC: Contact Form
 // Validation.
 let validate = function (e) {
   let fields = document.querySelectorAll(
@@ -355,7 +350,7 @@ function submitForm(event) {
   }
 
   // Send the data to the server (you need a server-side script to handle this)
-  fetch('server_script.php', {
+  fetch('', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
